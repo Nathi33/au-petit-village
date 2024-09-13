@@ -1,1 +1,95 @@
-/* You can add global styles to this file, and also import other style files */
+/********* POLICE *********/
+
+@font-face {
+  font-family: "Bubbleboddy";
+  src: url("./assets/fonts/BubbleboddyNeue-Bold\ Trial.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bubbleboddy";
+  src: url("./assets/fonts/BubbleboddyNeue-ExtraBold\ Trial.ttf")
+    format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bubbleboddy";
+  src: url("./assets/fonts/BubbleboddyNeue-Light\ Trial.ttf") format("truetype");
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bubbleboddy";
+  src: url("./assets/fonts/bubbleboddyneue-regular\ trial.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bubbleboddy";
+  src: url("./assets/fonts/BubbleboddyNeue-Thin\ Trial.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+/********* GENERAL *********/
+
+body {
+  font-family: "Bubbleboddy", sans-serif;
+  color: #151217;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9d0a3;
+}
+
+h1 {
+  font-family: "Bubbleboddy", sans-serif;
+  font-size: 2.5rem;
+  font-style: bold;
+}
+
+h2 {
+  font-family: "Bubbleboddy", sans-serif;
+  font-size: 2rem;
+  font-style: bold;
+}
+
+h3 {
+  font-family: "Bubbleboddy", sans-serif;
+  font-size: 1.5rem;
+  font-style: bold;
+}
+
+h4 {
+  font-family: "Bubbleboddy", sans-serif;
+  font-size: 1.25rem;
+  font-style: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #151217;
+}
+
+ul {
+  font-family: "Bubbleboddy", sans-serif;
+  color: #151217;
+  list-style: none;
+}
+
+button {
+  font-family: "Bubbleboddy", sans-serif;
+  font-size: 1rem;
+  font-style: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #151217;
+  cursor: pointer;
+}

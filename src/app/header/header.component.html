@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+    <!-- routerLink est utilisé pour la navigation entre les pages -->
+    <a class="navbar-brand" routerLink="/"
+      ><img
+        src="../../assets/images/Logo-au-petit-village.jpg"
+        class="logo"
+        alt="logo au petit village"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/"
+            >Accueil</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">A propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/product">Produits</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cart">Panier</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
