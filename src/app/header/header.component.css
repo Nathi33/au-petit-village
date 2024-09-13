@@ -1,0 +1,14 @@
+nav {
+  background-color: #da001e;
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.navbar-nav > li > a:active,
+.navbar-nav > li > a:focus,
+.navbar-nav > li > a:hover {
+  text-decoration: underline;
+}
