@@ -1,0 +1,102 @@
+<main class="accueil-general">
+  <h1 class="title">Bienvenue Au Petit Village</h1>
+  <div class="card-principale mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="../../assets/images/Village.jpg"
+          class="img-fluid rounded-start"
+          alt="Image représentant la France avec un zoom sur le dernier villageois gaulois"
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p class="card-text">
+            <strong>"Au petit village"</strong> est une entreprise qui
+            confectionne des figurines insprées de la bande dessinée Astérix et
+            Obélix.
+          </p>
+          <p class="card-text">
+            Les figurines sont en résine et peintes à la main.
+          </p>
+          <p class="card-text">Elles sont fabriquées en France.</p>
+        </div>
+        <button type="button" class="btn-link btn-outline">
+          <a class="about-link" routerLink="/about">En savoir plus</a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="title">Figurines</h2>
+
+  <!-- Pour trier les figurines par prix -->
+  <main class="search">
+    <div class="dropdown">
+      <button
+        class="btn-dropdown dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Trier par :
+      </button>
+      <ul class="dropdown-menu">
+        <li>
+          <a class="dropdown-item" href="#" (click)="setSortOrder(true)"
+            >Prix croissant</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="#" (click)="setSortOrder(false)"
+            >Prix décroissant</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="container-fluid">
+      <form class="d-flex" role="search">
+        <input
+          class="search-bar form-control me-2"
+          type="search"
+          name="search"
+          aria-label="search"
+          placeholder="Recherche par nom"
+          [(ngModel)]="searchTerm"
+        />
+        <button class="btn-search btn-outline" type="submit">Chercher</button>
+      </form>
+    </div>
+
+    <!-- Affichage des figurines -->
+    <div class="row row-cols-1 row-cols-md-3 g-5 custom-row">
+      <!-- ngFor répète le tableau figurines et affiche une carte pour chaque élément. -->
+      <div
+        class="col"
+        *ngFor="
+          let figurine of figurines
+            | filterByName : searchTerm
+            | sortByPrice : isAscending
+        "
+      >
+        <div class="card h-100">
+          <!-- liaison dynamiquement de l'URL de l'image avec le tableau de données et l'attribut alt de l'image à partir des données. -->
+          <a class="link-figurine" routerLink="#"
+            ><img
+              [src]="figurine.imageUrl"
+              class="card-img mx-auto d-block"
+              [alt]="figurine.alt"
+          /></a>
+          <div class="card-body">
+            <a class="link-cardtitle" routerLink="#"
+              ><h5 class="card-title">{{ figurine.name }}</h5></a
+            >
+            <p class="card-price">
+              {{ figurine.price | currency : "EUR" }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</main>

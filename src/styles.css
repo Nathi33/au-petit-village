@@ -40,36 +40,35 @@
 /********* GENERAL *********/
 
 body {
-  font-family: "Bubbleboddy", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   color: #151217;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f9d0a3;
 }
 
 h1 {
   font-family: "Bubbleboddy", sans-serif;
   font-size: 2.5rem;
-  font-style: bold;
+  font-weight: bold;
 }
 
 h2 {
   font-family: "Bubbleboddy", sans-serif;
   font-size: 2rem;
-  font-style: bold;
+  font-weight: bold;
 }
 
 h3 {
   font-family: "Bubbleboddy", sans-serif;
   font-size: 1.5rem;
-  font-style: bold;
+  font-weight: bold;
 }
 
 h4 {
   font-family: "Bubbleboddy", sans-serif;
   font-size: 1.25rem;
-  font-style: bold;
+  font-weight: bold;
 }
 
 a {
@@ -78,18 +77,24 @@ a {
 }
 
 ul {
-  font-family: "Bubbleboddy", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   color: #151217;
   list-style: none;
 }
 
-button {
-  font-family: "Bubbleboddy", sans-serif;
+p {
+  font-family: "Comforta", sans-serif;
   font-size: 1rem;
-  font-style: bold;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  color: #151217;
-  cursor: pointer;
+}
+
+button {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+main {
+  background-color: #f9d0a3;
+  margin-top: 4rem;
+  padding: 0 0.675rem;
 }
