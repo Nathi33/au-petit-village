@@ -1,0 +1,101 @@
+/********* PRESENTATION ENTREPRISE *********/
+
+.title {
+  text-align: center;
+  padding: 2.5rem 0;
+  font-weight: bold;
+}
+
+.card-principale {
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0.3125rem 0.3125rem 0.3125rem #151217;
+}
+
+.img-fluid {
+  width: 18rem;
+  height: auto;
+  border-radius: 0.625rem;
+}
+
+.card-text {
+  margin-bottom: 1.125rem;
+}
+
+.about-link {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-link {
+  background-color: #151217;
+  margin-top: 3.5rem;
+  border-radius: 0.625rem;
+}
+
+.btn-link:hover {
+  background-color: white;
+  border-color: #151217;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.about-link:hover {
+  color: #151217;
+  text-decoration: none;
+}
+
+/********* FIGURINES *********/
+
+.custom-row {
+  width: 100%; /* Définit la largeur de l'élément parent */
+  margin: 0 auto; /* Centre la div horizontalement */
+}
+
+.card-img {
+  width: 75%;
+  height: auto;
+  margin: 1.5rem 0;
+}
+
+.link-cardtitle {
+  text-align: center;
+  text-decoration: none;
+  color: #151217;
+}
+
+.card-price {
+  font-weight: bold;
+  border: #fdd90b solid 0.125rem;
+  background-color: #fdd90b;
+  width: fit-content; /* Prend la taille du contenu */
+  margin: 1.5rem auto;
+  cursor: default;
+}
+
+.dropdown {
+  margin: 1.5rem 1.5rem 3.5rem 1.5rem;
+}
+
+.btn-dropdown {
+  background-color: #151217;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.625rem;
+}
+
+.search-bar {
+  width: 25%;
+}
+
+.btn-search {
+  background-color: #151217;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.625rem;
+}
+
+.container-fluid {
+  padding: 1.5rem;
+}
