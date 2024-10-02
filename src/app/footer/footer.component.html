@@ -1,0 +1,39 @@
+<div class="row">
+  <!-- création d'une ligne de 3 colonnes -->
+  <article class="col-md-4">
+    <a class="navbar-brand" routerLink="/">
+      <h3 class="footer-title">Au Petit Village</h3>
+      <img
+        src="../../assets/images/Logo-au-petit-village.jpg"
+        alt="Logo de l'entreprise un petit village représentant un casque ailé"
+        class="logo"
+      />
+    </a>
+  </article>
+  <article class="col-md-4">
+    <h3 class="footer-title">Liens utiles</h3>
+    <ul>
+      <li><a class="footer-link" routerLink="/about">A propos</a></li>
+      <li><a class="footer-link" routerLink="/product">Nos produits</a></li>
+      <li><a class="footer-link" routerLink="/contact">Nous contacter</a></li>
+      <li>
+        <a class="footer-link" routerLink="/mentionslegales"
+          >Mentions Légales</a
+        >
+      </li>
+    </ul>
+  </article>
+  <article class="col-md-4">
+    <h3 class="footer-title">Nous suivre</h3>
+    <div class="container-logos">
+      <a
+        *ngFor="let link of socialLinks"
+        [href]="link.url"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img [src]="link.imageSrc" class="logosocial" [alt]="link.altText" />
+      </a>
+    </div>
+  </article>
+</div>
