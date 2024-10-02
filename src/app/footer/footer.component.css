@@ -1,0 +1,25 @@
+.row {
+  background-color: #da001e;
+  padding-top: 2rem;
+  margin-top: 4rem;
+}
+
+.footer-title {
+  font-weight: bold;
+  color: #151217;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #151217;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.logosocial {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  margin-right: 1.25rem;
+}

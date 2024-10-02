@@ -2,9 +2,8 @@ nav {
   background-color: #da001e;
 }
 
-.logo {
-  width: 2.5rem;
-  height: 2.5rem;
+.navbar-nav > li > a {
+  color: #151217;
 }
 
 .navbar-nav > li > a:active,

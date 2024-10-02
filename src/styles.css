@@ -71,11 +71,6 @@ h4 {
   font-weight: bold;
 }
 
-a {
-  text-decoration: none;
-  color: #151217;
-}
-
 ul {
   font-family: "Comfortaa", sans-serif;
   color: #151217;
@@ -97,4 +92,9 @@ main {
   background-color: #f9d0a3;
   margin-top: 4rem;
   padding: 0 0.675rem;
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
 }

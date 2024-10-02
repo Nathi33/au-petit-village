@@ -1,6 +1,7 @@
 /********* PRESENTATION ENTREPRISE *********/
 
 .title {
+  color: #151217;
   text-align: center;
   padding: 2.5rem 0;
   font-weight: bold;
@@ -20,10 +21,12 @@
 }
 
 .card-text {
+  color: #151217;
   margin-bottom: 1.125rem;
 }
 
 .about-link {
+  font-family: "Comfortaa", sans-serif;
   text-decoration: none;
   color: white;
 }
@@ -35,6 +38,7 @@
 }
 
 .btn-link:hover {
+  font-family: "Comfortaa", sans-serif;
   background-color: white;
   border-color: #151217;
   font-weight: bold;
@@ -59,6 +63,11 @@
   margin: 1.5rem 0;
 }
 
+.card-title {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: bold;
+}
+
 .link-cardtitle {
   text-align: center;
   text-decoration: none;
@@ -66,7 +75,9 @@
 }
 
 .card-price {
+  font-family: "Comfortaa", sans-serif;
   font-weight: bold;
+  color: #151217;
   border: #fdd90b solid 0.125rem;
   background-color: #fdd90b;
   width: fit-content; /* Prend la taille du contenu */
@@ -81,8 +92,13 @@
 .btn-dropdown {
   background-color: #151217;
   color: white;
+  font-family: "Comfortaa", sans-serif;
   font-weight: bold;
   border-radius: 0.625rem;
+}
+
+.dropdown-item {
+  color: #151217;
 }
 
 .search-bar {
@@ -92,6 +108,7 @@
 .btn-search {
   background-color: #151217;
   color: white;
+  font-family: "Comfortaa", sans-serif;
   font-weight: bold;
   border-radius: 0.625rem;
 }
