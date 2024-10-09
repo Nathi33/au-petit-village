@@ -74,15 +74,15 @@
       >
         <div class="card h-100">
           <!-- liaison dynamiquement de l'URL de l'image avec le tableau de données et l'attribut alt de l'image à partir des données. -->
-          <a class="link-figurine" routerLink="#"
+          <a class="link-figurine" [routerLink]="['/product', figurine.id]"
             ><img
               [src]="figurine.imageUrl"
               class="card-img mx-auto d-block"
               [alt]="figurine.alt"
           /></a>
           <div class="card-body">
-            <a class="link-cardtitle" routerLink="#"
-              ><h5 class="card-title">{{ figurine.name }}</h5></a
+            <a class="link-cardtitle" [routerLink]="['/product', figurine.id]"
+              ><h3 class="card-title">{{ figurine.name }}</h3></a
             >
             <p class="card-price">
               {{ figurine.price | currency : "EUR" }}

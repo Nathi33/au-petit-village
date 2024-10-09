@@ -1,3 +1,34 @@
 <main class="product-general">
-  <h1>Nos Produits</h1>
+  <h2 class="product-title">Détail de ma figurine</h2>
+  <div class="card mb-3" *ngIf="figurine">
+    <div class="row g-0">
+      <div class="product-img col-md-4">
+        <img
+          [src]="figurine.imageUrl"
+          class="img-fluid rounded-start"
+          [alt]="figurine.alt"
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title">{{ figurine.name }}</h3>
+          <p class="card-text">
+            Description : <i>{{ figurine.description }}</i>
+          </p>
+          <p class="card-text">
+            Matériel : <i>{{ figurine.material }}</i>
+          </p>
+          <p class="card-text">
+            Hauteur : <i>{{ figurine.height | unitCm }}</i>
+          </p>
+          <p class="card-text">
+            Prix : <i>{{ figurine.price | currency : "EUR" }}</i>
+          </p>
+        </div>
+        <button type="button" class="btn">
+          <a class="product-link" routerLink="/cart">Ajouter au panier</a>
+        </button>
+      </div>
+    </div>
+  </div>
 </main>
