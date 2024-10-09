@@ -1,0 +1,22 @@
+.about-title {
+  color: #151217;
+  text-align: center;
+  padding: 2.5rem 0;
+  font-weight: bold;
+}
+
+.about-general {
+  display: flex;
+  align-items: center;
+}
+
+.about-img {
+  width: 45%;
+  height: auto;
+  border-radius: 0.625rem;
+  margin-right: 2rem;
+}
+
+.about-p {
+  line-height: 2.5;
+}

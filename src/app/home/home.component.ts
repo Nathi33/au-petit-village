@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PresentationService } from '../presentation.service';
 
 interface Figurine {
   name: string;
@@ -12,7 +13,14 @@ interface Figurine {
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  presentations: any[] = [];
+  constructor(private presentationService: PresentationService) {}
+
+  ngOnInit(): void {
+    this.presentations = this.presentationService.presentations;
+  }
+
   searchTerm: string = '';
   isAscending: boolean | null = null; // Définir si l'ordre est croissant ou décroissant
 

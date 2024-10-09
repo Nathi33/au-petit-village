@@ -1,25 +1,18 @@
 <main class="accueil-general">
   <h1 class="title">Bienvenue Au Petit Village</h1>
-  <div class="card-principale mb-3">
+  <div class="card-principale mb-3" *ngFor="let presentation of presentations">
     <div class="row g-0">
       <div class="col-md-4">
         <img
-          src="../../assets/images/Village.jpg"
+          [src]="presentation.imgURL1"
           class="img-fluid rounded-start"
-          alt="Image représentant la France avec un zoom sur le dernier villageois gaulois"
+          [alt]="presentation.alt1"
         />
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <p class="card-text">
-            <strong>"Au petit village"</strong> est une entreprise qui
-            confectionne des figurines insprées de la bande dessinée Astérix et
-            Obélix.
-          </p>
-          <p class="card-text">
-            Les figurines sont en résine et peintes à la main.
-          </p>
-          <p class="card-text">Elles sont fabriquées en France.</p>
+          <!-- innerHTML permet de lire la balise strong -->
+          <p class="card-text" [innerHTML]="presentation.paragraph"></p>
         </div>
         <button type="button" class="btn-link btn-outline">
           <a class="about-link" routerLink="/about">En savoir plus</a>
