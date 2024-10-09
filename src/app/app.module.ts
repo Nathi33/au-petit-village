@@ -21,6 +21,7 @@ import { LOCALE_ID } from '@angular/core';
 import { SortByPricePipe } from './sort-by-price.pipe';
 import { FilterByNamePipe } from './filter-by-name.pipe';
 import { FooterComponent } from './footer/footer.component';
+import { UnitCmPipe } from './unit-cm.pipe';
 
 registerLocaleData(localeFr);
 
@@ -36,6 +37,7 @@ registerLocaleData(localeFr);
     SortByPricePipe,
     FilterByNamePipe,
     FooterComponent,
+    UnitCmPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
