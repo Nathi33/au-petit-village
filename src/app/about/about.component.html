@@ -1,3 +1,13 @@
-<main class="about-general">
-  <h1>A propos</h1>
+<main class="about-main">
+  <h2 class="about-title">A la découverte de notre indomptable village !</h2>
+  <div class="about-general" *ngFor="let presentation of presentations">
+    <img
+      [src]="presentation.imgURL2"
+      class="about-img"
+      [alt]="presentation.alt2"
+    />
+    <div class="about-text">
+      <p class="about-p" [innerHTML]="presentation.text"></p>
+    </div>
+  </div>
 </main>
