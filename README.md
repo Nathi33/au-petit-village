@@ -1,27 +1,75 @@
-# AuPetitVillage
+# Au Petit Village
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+Bienvenue sur le site Au Petit Village, boutique en ligne qui confectionne et vend des figurines artisanales inspirées de l'univers d'Astérix et Obélix.
+Ce projet a été développé en Angular.
 
-## Development server
+## Table des matières
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+    . Description
+    . Caractéristiques
+    . Technologies utilisées
+    . Installation
+    . Construction du projet
+    . Usage
+    . Structure du projet
+    . Contributeur
 
-## Code scaffolding
+## Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Au Petit Village est un site e-commerce dédié aux passionnés de l'univers d'Astérix et Obélix, offrant une collection exclusive de figurines inspirées des personnages iconiques comme Astérix, Obélix, Panoramix, et bien d'autres.
 
-## Build
+Les utilisateurs peuvent :
+. Parcourir les différentes figurines,
+. Consulter les détails des produits (prix, description, image),
+.Ajouter des articles à leur panier.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Caractéristiques
 
-## Running unit tests
+    . Catalogue dynamique des figurines
+    . Fiches produits détaillées
+    . Redirection vers la page 404 en cas d'erreur de navigation
+    .Design inspiré de l'univers d'Astérix et Obélix
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies utilisées
 
-## Running end-to-end tests
+    . Angular (Framework front-end)
+    . TypeScript (Langage de programmation)
+    . HTML/CSS (Structure et style)
+    . Angular Router (Système de routage pour la navigation)
+    . Boostrap (Frameword de Design)
+    . Node.js et npm (Gestion des dépendances)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Installation
 
-## Further help
+### Prérequis
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    . VSCode
+    . Node.js
+    . Angular CLI
+
+### Installation
+
+    1. Clonez le dépôt : git clone https://github.com/Nathi33/au-petit-village.git
+    2. Accédez au répertoire du projet : cd au-petit-village
+    3. Installer les dépendances : npm install
+    4. Lancez le serveur de développement avec la commande : npm run start
+    5. L'application sera accessible à l'adresse http://localhost:4200
+
+### Construction du projet
+
+    . Pour construire le projet en vue de le déployer, utiliser la commande : npm run build
+    . Pouur lancer le test runner en
+
+### Usage
+
+Une fois le serveur de développement lancé, vous pouvez explorer les différentes sections du site :
+
+    . Accueil : Présentation des figurines disponibles,
+    . Catalogue : Liste complète des figurines avec leurs images et descriptions,
+    . A propos : Histoire de la société
+    . Page d'erreur 404 : Page 404 inspirée d'Astérix et Obélix.
+
+## Contributeur
+
+    . Nathi33 - Développeuse principale
+    . Contributions et suggestions sont les bienvenues via des pull requests
