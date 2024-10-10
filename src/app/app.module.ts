@@ -23,6 +23,7 @@ import { SortByPricePipe } from './sort-by-price.pipe';
 import { FilterByNamePipe } from './filter-by-name.pipe';
 import { FooterComponent } from './footer/footer.component';
 import { UnitCmPipe } from './unit-cm.pipe';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 registerLocaleData(localeFr);
 
@@ -39,6 +40,7 @@ registerLocaleData(localeFr);
     FilterByNamePipe,
     FooterComponent,
     UnitCmPipe,
+    NotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],

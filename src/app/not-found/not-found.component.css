@@ -1,0 +1,21 @@
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notfound-title {
+  font-weight: bold;
+  color: #151217;
+  padding: 2.5rem 0;
+}
+
+.notfound-text {
+  color: #151217;
+  padding-bottom: 1.5rem;
+}
+
+.notfound-img {
+  width: 40%;
+  height: auto;
+}

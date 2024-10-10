@@ -1,0 +1,11 @@
+.cart-general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-title {
+  color: #151217;
+  font-weight: bold;
+  padding: 2.5rem 0;
+}
