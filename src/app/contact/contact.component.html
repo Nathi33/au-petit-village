@@ -1,3 +1,68 @@
 <main class="contact-general">
-  <h1>Contact</h1>
+  <h2 class="contact-title">Nous contacter</h2>
+  <div class="contact-form">
+    <form [formGroup]="formulaire" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name" class="form-label"></label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          formControlName="name"
+          placeholder="Votre nom"
+        />
+        <!-- Message d'erreur si le champ est vide -->
+        <div *ngIf="submitted && f['name'].errors" class="text-danger">
+          Le champ nom est requis.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="surname" class="form-label"></label>
+        <input
+          type="text"
+          class="form-control"
+          id="surname"
+          formControlName="surname"
+          placeholder="Votre prénom"
+        />
+        <div *ngIf="submitted && f['surname'].errors" class="text-danger">
+          Le champs prénom est requis.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label"></label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          formControlName="email"
+          placeholder="Votre adresse email"
+        />
+        <div *ngIf="submitted && f['email'].errors" class="text-danger">
+          Le champ email est requis.
+          <div *ngIf="f['email'].errors?.['email']">
+            Veuillez entrer une adresse email valide.
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label"></label>
+        <textarea
+          class="form-control"
+          id="message"
+          formControlName="message"
+          rows="3"
+          placeholder="Votre message"
+        ></textarea>
+        <div *ngIf="submitted && f['message'].errors" class="text-danger">
+          Le champ message est requis.
+        </div>
+      </div>
+      <button type="submit" class="contact-btn">Envoyer</button>
+    </form>
+    <!-- Message de confirmation d'envoi -->
+    <div class="msg-envoi" *ngIf="messageEnvoye">
+      Votre message a été envoyé avec succès !
+    </div>
+  </div>
 </main>

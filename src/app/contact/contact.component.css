@@ -1,0 +1,45 @@
+.contact-general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-title {
+  font-weight: bold;
+  color: #151217;
+  padding: 2.5rem 0;
+}
+
+.contact-form {
+  border: #151217 solid 0.125rem;
+  width: 50%;
+  padding: 1.5rem;
+  background-color: #f9d0a3;
+  border-radius: 1.5rem;
+  font-family: Comfortaa, sans-serif;
+}
+
+.form-control {
+  border: #151217 solid 0.125rem;
+}
+
+.contact-btn {
+  margin-top: 1.5rem;
+  background-color: #fdd90b;
+  color: #151217;
+  border-radius: 1.5rem;
+  border: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+.contact-btn:hover {
+  background-color: #151217;
+  color: #fdd90b;
+}
+
+.msg-envoi {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
