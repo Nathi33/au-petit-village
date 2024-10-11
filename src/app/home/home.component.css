@@ -15,9 +15,13 @@
 }
 
 .img-fluid {
-  width: 18rem;
+  width: 95%;
   height: auto;
   border-radius: 0.625rem;
+}
+
+.card-body {
+  padding: 0 1.25rem;
 }
 
 .card-text {
@@ -33,7 +37,8 @@
 
 .btn-link {
   background-color: #151217;
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
+  margin-left: 1.25rem;
   border-radius: 0.625rem;
 }
 
@@ -53,8 +58,8 @@
 /********* ENSEMBLE FIGURINES *********/
 
 .custom-row {
-  width: 100%; /* Définit la largeur de l'élément parent */
-  margin: 0 auto; /* Centre la div horizontalement */
+  width: 100%;
+  margin: 0 auto;
 }
 
 .card-img {
@@ -102,7 +107,7 @@
 }
 
 .search-bar {
-  width: 25%;
+  width: 35%;
 }
 
 .btn-search {
@@ -156,4 +161,26 @@
 .btn-back:hover {
   background-color: #151217;
   color: #fdd90b;
+}
+
+/********* CSS RESPONSIVES *********/
+
+@media (max-width: 768px) {
+  .custom-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-img {
+    width: 100%;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .list-group {
+    width: 100%;
+  }
 }

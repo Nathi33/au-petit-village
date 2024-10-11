@@ -1,3 +1,5 @@
+/*********** Style Contact  ************/
+
 .contact-general {
   display: flex;
   flex-direction: column;
@@ -12,7 +14,7 @@
 
 .contact-form {
   border: #151217 solid 0.125rem;
-  width: 50%;
+  width: 90%;
   padding: 1.5rem;
   background-color: #f9d0a3;
   border-radius: 1.5rem;
@@ -42,4 +44,12 @@
   color: green;
   font-weight: bold;
   margin-top: 10px;
+}
+
+/*********** Style Contact Responsive  ************/
+
+@media (min-width: 768px) {
+  .contact-form {
+    width: 50%;
+  }
 }
