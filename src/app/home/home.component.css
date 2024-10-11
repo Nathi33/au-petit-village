@@ -50,7 +50,7 @@
   text-decoration: none;
 }
 
-/********* FIGURINES *********/
+/********* ENSEMBLE FIGURINES *********/
 
 .custom-row {
   width: 100%; /* Définit la largeur de l'élément parent */
@@ -115,4 +115,45 @@
 
 .container-fluid {
   padding: 1.5rem;
+}
+
+.link-list-group {
+  text-decoration: none;
+  color: #151217;
+}
+
+.link-list-group:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.list-group {
+  width: 35%;
+}
+
+/********* FIGURINE SELCETIONNEE *********/
+
+.card-select {
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0.3125rem 0.3125rem 0.3125rem #151217;
+}
+
+.card-select-link {
+  text-decoration: none;
+  color: #151217;
+  text-align: center;
+}
+
+.btn-back {
+  background-color: #fdd90b;
+  margin: 2rem 0;
+  font-weight: bold;
+  border-radius: 1.5rem;
+}
+
+.btn-back:hover {
+  background-color: #151217;
+  color: #fdd90b;
 }

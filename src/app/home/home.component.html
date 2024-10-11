@@ -1,5 +1,7 @@
 <main class="accueil-general">
   <h1 class="title">Bienvenue Au Petit Village</h1>
+
+  <!-- Présentation principale -->
   <div class="card-principale mb-3" *ngFor="let presentation of presentations">
     <div class="row g-0">
       <div class="col-md-4">
@@ -21,10 +23,11 @@
     </div>
   </div>
 
+  <!-- Section figurines -->
   <h2 class="title">Figurines</h2>
 
-  <!-- Pour trier les figurines par prix -->
-  <main class="search">
+  <!-- Tri des figurines par prix -->
+  <section class="search">
     <div class="dropdown">
       <button
         class="btn-dropdown dropdown-toggle"
@@ -36,17 +39,19 @@
       </button>
       <ul class="dropdown-menu">
         <li>
-          <a class="dropdown-item" href="#" (click)="setSortOrder(true)"
-            >Prix croissant</a
-          >
+          <button class="dropdown-item" (click)="setSortOrder(true)">
+            Prix croissant
+          </button>
         </li>
         <li>
-          <a class="dropdown-item" href="#" (click)="setSortOrder(false)"
-            >Prix décroissant</a
-          >
+          <button class="dropdown-item" (click)="setSortOrder(false)">
+            Prix décroissant
+          </button>
         </li>
       </ul>
     </div>
+
+    <!-- Barre de recherche -->
     <div class="container-fluid">
       <form class="d-flex" role="search">
         <input
@@ -57,39 +62,91 @@
           placeholder="Recherche par nom"
           [(ngModel)]="searchTerm"
         />
-        <button class="btn-search btn-outline" type="submit">Chercher</button>
+        <button class="btn-search btn-outline" type="button">Chercher</button>
       </form>
     </div>
 
-    <!-- Affichage des figurines -->
+    <!-- Liste des noms correspondant à la recherche -->
+    <div
+      *ngIf="searchTerm && (figurines | filterByName : searchTerm).length > 0"
+      class="search-results"
+    >
+      <ul class="list-group">
+        <li
+          *ngFor="let figurine of figurines | filterByName : searchTerm"
+          class="list-group-item"
+        >
+          <a class="link-list-group" (click)="selectFigurine(figurine)">{{
+            figurine.name
+          }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Affichage de toutes les figurines -->
     <div class="row row-cols-1 row-cols-md-3 g-5 custom-row">
-      <!-- ngFor répète le tableau figurines et affiche une carte pour chaque élément. -->
-      <div
-        class="col"
-        *ngFor="
-          let figurine of figurines
-            | filterByName : searchTerm
-            | sortByPrice : isAscending
-        "
-      >
-        <div class="card h-100">
-          <!-- liaison dynamiquement de l'URL de l'image avec le tableau de données et l'attribut alt de l'image à partir des données. -->
-          <a class="link-figurine" [routerLink]="['/product', figurine.id]"
-            ><img
-              [src]="figurine.imageUrl"
-              class="card-img mx-auto d-block"
-              [alt]="figurine.alt"
-          /></a>
-          <div class="card-body">
-            <a class="link-cardtitle" [routerLink]="['/product', figurine.id]"
-              ><h3 class="card-title">{{ figurine.name }}</h3></a
-            >
-            <p class="card-price">
-              {{ figurine.price | currency : "EUR" }}
-            </p>
+      <ng-container *ngIf="!selectedFigurine; else selectedFigurineTemplate">
+        <div
+          class="col"
+          *ngFor="let figurine of figurines | sortByPrice : isAscending"
+        >
+          <div class="card h-100">
+            <!-- liaison dynamiquement de l'URL de l'image avec le tableau de données et l'attribut alt de l'image à partir des données. -->
+            <a class="link-figurine" [routerLink]="['/product', figurine.id]"
+              ><img
+                [src]="figurine.imageUrl"
+                class="card-img mx-auto d-block"
+                [alt]="figurine.alt"
+            /></a>
+            <div class="card-body">
+              <a class="link-cardtitle" [routerLink]="['/product', figurine.id]"
+                ><h3 class="card-title">{{ figurine.name }}</h3></a
+              >
+              <p class="card-price">
+                {{ figurine.price | currency : "EUR" }}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </ng-container>
+
+      <!-- Affichage figurine sélectionnée -->
+      <ng-template #selectedFigurineTemplate>
+        <div class="card-select-global" *ngIf="selectedFigurine">
+          <div class="card-select">
+            <div class="card-select-img">
+              <a
+                class="card-select-link"
+                [routerLink]="['/product', selectedFigurine.id]"
+                ><img
+                  [src]="selectedFigurine.imageUrl"
+                  class="card-img mx-auto d-block"
+                  [alt]="selectedFigurine.alt"
+                />
+              </a>
+            </div>
+
+            <div>
+              <div class="card-body">
+                <a
+                  class="card-select-link"
+                  [routerLink]="['/product', selectedFigurine.id]"
+                >
+                  <h3 class="card-title">{{ selectedFigurine.name }}</h3>
+                </a>
+
+                <p class="card-price">
+                  {{ selectedFigurine.price | currency : "EUR" }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Bouton de retour à la liste -->
+          <button class="btn-back" (click)="selectedFigurine = null">
+            Retour à la liste
+          </button>
+        </div>
+      </ng-template>
     </div>
-  </main>
+  </section>
 </main>
