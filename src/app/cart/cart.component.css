@@ -1,3 +1,5 @@
+/*********** Style Cart  ************/
+
 .cart-general {
   display: flex;
   flex-direction: column;
@@ -8,4 +10,15 @@
   color: #151217;
   font-weight: bold;
   padding: 2.5rem 0;
+}
+
+.cart-img {
+  width: 80%;
+  height: auto;
+}
+
+/*********** Style Cart Responsive  ************/
+
+.cart-img {
+  width: auto;
 }

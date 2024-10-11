@@ -1,26 +1,15 @@
 <main class="about-main">
-  <!-- <h2 class="about-title">A la découverte de notre indomptable village !</h2>
-  <div class="about-general" *ngFor="let presentation of presentations">
-    <img
-      [src]="presentation.imgURL2"
-      class="about-img"
-      [alt]="presentation.alt2"
-    />
-    <div class="about-text">
-      <p class="about-p" [innerHTML]="presentation.text"></p>
-    </div>
-  </div> -->
   <h2 class="about-title">A la découverte de notre indomptable village !</h2>
   <div class="card mb-3" *ngFor="let presentation of presentations">
     <div class="row g-0">
-      <div class="container-img-about col-md-6">
+      <div class="container-img-about col-12 col-lg-6">
         <img
           [src]="presentation.imgURL2"
           class="about-img"
           [alt]="presentation.alt2"
         />
       </div>
-      <div class="col-md-6">
+      <div class="col-12 col-lg-6">
         <div class="card-body">
           <p class="about-p" [innerHTML]="presentation.text"></p>
         </div>

@@ -53,16 +53,20 @@
 
     <!-- Barre de recherche -->
     <div class="container-fluid">
-      <form class="d-flex" role="search">
-        <input
-          class="search-bar form-control me-2"
-          type="search"
-          name="search"
-          aria-label="search"
-          placeholder="Recherche par nom"
-          [(ngModel)]="searchTerm"
-        />
-        <button class="btn-search btn-outline" type="button">Chercher</button>
+      <form class="row" role="search">
+        <div class="col-12 col-md-9 mb-2">
+          <input
+            class="search-bar form-control"
+            type="search"
+            name="search"
+            aria-label="search"
+            placeholder="Recherche par nom"
+            [(ngModel)]="searchTerm"
+          />
+        </div>
+        <div class="col-12 col-md-3">
+          <button class="btn-search btn-outline" type="button">Chercher</button>
+        </div>
       </form>
     </div>
 
@@ -84,7 +88,7 @@
     </div>
 
     <!-- Affichage de toutes les figurines -->
-    <div class="row row-cols-1 row-cols-md-3 g-5 custom-row">
+    <div class="row row-cols-1 row-cols-md-3 g-3 custom-row">
       <ng-container *ngIf="!selectedFigurine; else selectedFigurineTemplate">
         <div
           class="col"
