@@ -10,4 +10,5 @@ nav {
 .navbar-nav > li > a:focus,
 .navbar-nav > li > a:hover {
   text-decoration: underline;
+  font-weight: bold;
 }

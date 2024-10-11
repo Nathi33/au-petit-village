@@ -5,16 +5,27 @@
   font-weight: bold;
 }
 
-.about-general {
+.card {
+  border: none;
+}
+
+.container-img-about {
   display: flex;
+  justify-content: center;
   align-items: center;
+  background-color: #f9d0a3;
 }
 
 .about-img {
-  width: 45%;
+  width: 85%;
   height: auto;
   border-radius: 0.625rem;
   margin-right: 2rem;
+}
+
+.card-body {
+  background-color: #f9d0a3;
+  padding-bottom: 3rem;
 }
 
 .about-p {

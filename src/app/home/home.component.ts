@@ -27,4 +27,12 @@ export class HomeComponent implements OnInit {
   setSortOrder(order: boolean) {
     this.isAscending = order; // Définit l'ordre de tri
   }
+
+  selectedFigurine: any = null;
+
+  selectFigurine(figurine: any) {
+    console.log('Figurine sélectionnée :', figurine);
+    this.selectedFigurine = figurine;
+    this.searchTerm = ''; // Réinitialiser le terme de recherche
+  }
 }

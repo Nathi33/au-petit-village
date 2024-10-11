@@ -21,7 +21,8 @@ export class FilterByNamePipe implements PipeTransform {
     return figurines.filter((figurine) => {
       // Normaliser et supprimer les accents du nom de chaque figurine
       const normalizedName = this.removeAccents(figurine.name.toLowerCase());
-      return normalizedName.includes(normalizedSearchTerm);
+      // Permet de ne garder que les noms qui commencent par le searchTerm
+      return normalizedName.startsWith(normalizedSearchTerm);
     });
   }
 }

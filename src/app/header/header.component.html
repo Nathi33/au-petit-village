@@ -20,22 +20,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/"
-            >Accueil</a
+        <li class="nav-item" *ngFor="let item of menuItems">
+          <a
+            class="nav-link"
+            [class.active]="item.active"
+            [routerLink]="item.link"
+            >{{ item.label | uppercase }}</a
           >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/about">A propos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/product">Produits</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/contact">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/cart">Panier</a>
         </li>
       </ul>
     </div>
