@@ -1,5 +1,11 @@
 <main class="product-general">
+  <!-- Bouton de retour à la liste des figurines -->
+  <div class="btn-back-figurine">
+    <button class="btn-back" (click)="goBack()">Retour à la liste</button>
+  </div>
+  <!-- Titre de la page -->
   <h2 class="product-title">Détail de ma figurine</h2>
+  <!-- Descriptif de la figurine -->
   <div class="card mb-3" *ngIf="figurine">
     <div class="row g-0">
       <div class="product-img col-md-4">
