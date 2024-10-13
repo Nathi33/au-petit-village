@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService, Figurine } from '../products.service';
 
 @Component({
@@ -12,6 +12,7 @@ export class ProductComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private productsService: ProductsService
   ) {}
 
@@ -20,5 +21,10 @@ export class ProductComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     // Récupère la figurine correspondant à l'ID
     this.figurine = this.productsService.getFigurineById(id);
+  }
+
+  // Méthode pour retourner à la liste des figurines
+  goBack() {
+    this.router.navigate(['/']); // Redirige vers la route de ta liste de figurines
   }
 }

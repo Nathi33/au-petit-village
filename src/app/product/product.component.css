@@ -49,3 +49,15 @@
 .btn:hover {
   background-color: #151217;
 }
+
+.btn-back {
+  background-color: #fdd90b;
+  margin: 2rem 0;
+  font-weight: bold;
+  border-radius: 1.5rem;
+}
+
+.btn-back:hover {
+  background-color: #151217;
+  color: #fdd90b;
+}
